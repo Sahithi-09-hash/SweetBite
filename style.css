@@ -1,0 +1,276 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #2D0505;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: gold ;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.logo {
+    height: 100px;
+    width: 250px;
+}
+.nav-links a {
+    color: gold;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #e91e63; 
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    margin-top: 38px;
+    padding: 0;
+    
+}
+
+.nav-links li {
+    margin-left: 60px;
+    
+}
+
+#home {
+    margin-left: 160px;
+}
+
+.nav-links li:hover {
+    color: #e91e63;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.hero {
+    background-image: url('Dessert.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 60px;
+    color: rgb(238, 208, 39);
+    font-family: emoji;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.hero p {
+    font-size: 70px;
+    margin-top: 20px;
+    color: rgba(0, 255, 64, 0.73);
+}
+
+.hero button {
+    background-color: #21201C;
+    color: rgb(238, 208, 39);
+    font-size: 25px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: -20px;
+    width: fit-content;
+}
+
+.hero button:hover {
+    color: #e91e63;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#user {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+#footer {
+    background-color: #2D0505;
+    color: gold;
+    padding: 20px;
+    text-align: center;
+}
+
+#recipes {
+    background-color: #21201C;
+    padding: 40px 20px;
+}
+
+.recipe-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s ease-in-out;
+    width: 370px;
+    height: 300px;
+}
+
+.recipe-card:hover {
+    transform: scale(1.03);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.recipe-card h3 {
+    margin: 15px 0 5px;
+    text-align: center;
+    color: #3e2f2f;
+}
+
+.recipe-card p {
+    color: #5c4a4a;
+    font-size: 0.95em;
+    text-align: center;
+}
+
+#choclatecake,
+#cake {
+    width: 275px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+#bite {
+    color: #e91e63;
+}
+
+#recipe {
+    color: rgb(238, 208, 39);
+    text-align: center;
+    background-color: #21201C;
+    font-family: emoji;
+    padding: 14px 0 3px;
+    margin: 0;
+}
+
+#recipe:hover {
+    color: #e91e63;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+
+
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #555;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #e91e63;
+}
+
+
+@media (max-width: 1023px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .logo {
+        height: 60px;
+        width: auto;
+        align-self: center;
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 50px;
+    }
+
+    .hero {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero button {
+        margin: 30px auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .recipe-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 35px;
+    }
+
+    .nav-links li {
+        font-size: 16px;
+    }
+
+    footer a {
+        font-size: 20px;
+    }
+}
